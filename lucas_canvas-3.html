@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me – Lucas David</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:    #e63946;
+    --blue:   #1d3557;
+    --sky:    #457b9d;
+    --cream:  #f1faee;
+    --yellow: #f4d35e;
+    --green:  #52b788;
+    --orange: #f77f00;
+    --purple: #7b2d8b;
+  }
+
+  body {
+    background: var(--cream);
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    padding: 32px 20px 48px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    text-align: center;
+    margin-bottom: 36px;
+    animation: fadeDown .7s ease both;
+  }
+  header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 5rem);
+    color: var(--blue);
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+  header p {
+    font-size: 1rem;
+    color: var(--sky);
+    font-weight: 600;
+    margin-top: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .accent-line {
+    width: 80px; height: 5px;
+    background: var(--red);
+    border-radius: 99px;
+    margin: 10px auto 0;
+  }
+
+  /* ── GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── CARD ── */
+  .card {
+    border-radius: 18px;
+    padding: 22px 22px 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,.10);
+    animation: fadeUp .6s ease both;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    opacity: .12;
+    background: #fff;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.35rem;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    background: rgba(255,255,255,.22);
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 99px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    transition: background .2s, transform .15s;
+  }
+  .tag:hover {
+    background: rgba(255,255,255,.38);
+    transform: scale(1.05);
+    cursor: default;
+  }
+
+  /* colours per card */
+  .c1 { background: linear-gradient(135deg, var(--blue), var(--sky)); }
+  .c2 { background: linear-gradient(135deg, #c1121f, var(--red)); }
+  .c3 { background: linear-gradient(135deg, #2d6a4f, var(--green)); }
+  .c4 { background: linear-gradient(135deg, #e76f51, var(--orange)); }
+  .c5 { background: linear-gradient(135deg, #6a0572, var(--purple)); }
+  .c6 { background: linear-gradient(135deg, #b5830a, var(--yellow)); }
+  .c6 .card-title, .c6 .tag { color: var(--blue); }
+  .c6 .tag { border-color: rgba(0,0,0,.2); background: rgba(255,255,255,.35); }
+  .c6 .tag:hover { background: rgba(255,255,255,.55); }
+
+  /* stagger */
+  .card:nth-child(1) { animation-delay: .05s; }
+  .card:nth-child(2) { animation-delay: .15s; }
+  .card:nth-child(3) { animation-delay: .25s; }
+  .card:nth-child(4) { animation-delay: .35s; }
+  .card:nth-child(5) { animation-delay: .45s; }
+  .card:nth-child(6) { animation-delay: .55s; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: .85rem;
+    color: var(--sky);
+    font-weight: 600;
+    letter-spacing: .5px;
+    animation: fadeUp .6s .65s ease both;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(26px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>About Me</h1>
+  <p>Lucas David · 8th Grade · English Project</p>
+  <div class="accent-line"></div>
+</header>
+
+<div class="grid">
+
+  <!-- 1 · WHO AM I -->
+  <div class="card c1">
+    <span class="card-icon">🧑</span>
+    <div class="card-title">Who Am I</div>
+    <div class="tags">
+      <span class="tag">Lucas David</span>
+      <span class="tag">13 years old</span>
+      <span class="tag">8th grade</span>
+      <span class="tag">Birthday: April 25</span>
+      <span class="tag">Asunción</span>
+      <span class="tag">New chapter</span>
+    </div>
+  </div>
+
+  <!-- 2 · DAILY ROUTINE -->
+  <div class="card c2">
+    <span class="card-icon">⏰</span>
+    <div class="card-title">Daily Routine</div>
+    <div class="tags">
+      <span class="tag">School 7–12 AM</span>
+      <span class="tag">English 1–4 PM</span>
+      <span class="tag">Work with sister</span>
+      <span class="tag">Weekends: outside</span>
+      <span class="tag">Stadium</span>
+      <span class="tag">Dinner with mom</span>
+    </div>
+  </div>
+
+  <!-- 3 · FAMILY -->
+  <div class="card c3">
+    <span class="card-icon">👨‍👩‍👧‍👦</span>
+    <div class="card-title">Family</div>
+    <div class="tags">
+      <span class="tag">2 sisters + 1 brother</span>
+      <span class="tag">Sister in Spain</span>
+      <span class="tag">Oldest sister: work</span>
+      <span class="tag">Mom: Asunción</span>
+      <span class="tag">Dad: outside</span>
+      <span class="tag">Dog: Ares</span>
+    </div>
+  </div>
+
+  <!-- 4 · CULTURE & ROOTS -->
+  <div class="card c4">
+    <span class="card-icon">🌎</span>
+    <div class="card-title">Culture & Roots</div>
+    <div class="tags">
+      <span class="tag">Paraguayan mom</span>
+      <span class="tag">Argentinian dad</span>
+      <span class="tag">Tereré</span>
+      <span class="tag">Chipa · Mbeju</span>
+      <span class="tag">Asado</span>
+      <span class="tag">Dulce de leche</span>
+      <span class="tag">Football ⚽</span>
+    </div>
+  </div>
+
+  <!-- 5 · PERSONALITY -->
+  <div class="card c5">
+    <span class="card-icon">💡</span>
+    <div class="card-title">Personality</div>
+    <div class="tags">
+      <span class="tag">Responsible</span>
+      <span class="tag">National pride</span>
+      <span class="tag">Self-aware</span>
+      <span class="tag">Active</span>
+      <span class="tag">My room = habitat</span>
+      <span class="tag">Growing</span>
+    </div>
+  </div>
+
+
+
+</div>
+
+<footer>🇵🇾 Paraguay · 🇦🇷 Argentina — A life that is both challenging and beautiful ✨</footer>
+
+</body>
+</html>
